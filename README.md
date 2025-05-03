@@ -1,45 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Store Vale App
 
-## Getting Started
+**Store Vale App** é o frontend oficial do projeto [App Store Vale Core](https://github.com/rnsiqueira/app-store-vale-core), desenvolvido com **Next.js**. Ele oferece uma interface moderna e responsiva para interação com a API backend, com autenticação via credenciais e Google, gerenciamento de sessões com **NextAuth** e renderização de produtos em formato de **cards customizados** criados pelo autor.
 
-First, run the development server:
+## 📃 Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este projeto tem como objetivo prover uma interface intuitiva e eficiente para usuários acessarem os produtos e serviços da Store Vale. Utilizando as melhores práticas de desenvolvimento frontend com React e Next.js, ele integra-se perfeitamente ao backend desenvolvido em Java Spring Boot.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Interface moderna e responsiva com **Next.js**
+* Autenticação com **NextAuth** (Google e credenciais locais)
+* Listagem de produtos em **cards personalizados**
+* Integração com a API REST do backend (Store Vale Core)
+* Geração de páginas estáticas e server-side rendering (SSR)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Tecnologias Utilizadas
 
-## Learn More
+* **Next.js** (React Framework)
+* **NextAuth.js**
+* **React**
+* **Tailwind CSS** (se aplicável)
+* **Axios** ou **Fetch API** para chamadas HTTP
 
-To learn more about Next.js, take a look at the following resources:
+## 🚩 Como Executar Localmente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone o repositório**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/rnsiqueira/store-vale-app.git
+   cd store-vale-app
+   ```
 
-## Deploy on Vercel
+2. **Instale as dependências**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Configure as variáveis de ambiente**:
 
+   Crie um arquivo `.env.local` baseado no `.env.example`, preenchendo as chaves do Google, URL da API backend e segredo do NextAuth.
 
-## building: 
-gcloud builds submit --tag gcr.io/store-valesolution/rep-valesolution-images/store-vale-app:latest
+4. **Execute o projeto em modo desenvolvimento**:
 
-## deploy cloud run
+   ```bash
+   npm run dev
+   ```
 
-gcloud run deploy  --image=gcr.io/store-valesolution/rep-valesolution-images/store-vale-app:latest --platform managed --region=southamerica-east1 --memory=512Mi --cpu=1 --timeout=700 --concurrency=80 --min-instances=0 --max-instances=5 --network default --subnet default --port=3000 --session-affinity --execution-environment=gen2 --allow-unauthenticated --ingress=all --update-labels component-id=ms-valesolution-core,environment=prod,resource=cloud-run,operational-state=active,service=store-vale-app
+5. **Acesse no navegador**:
 
+   ```
+   http://localhost:3000
+   ```
+
+## ⚖️ Estrutura de Pastas
+
+* `pages/` – Roteamento da aplicação e páginas SSR
+* `components/` – Componentes reutilizáveis como os cards de produto
+* `lib/` – Funções auxiliares, como integração com a API
+* `styles/` – Estilizações globais ou com Tailwind (se houver)
+
+## 📄 Licença
+
+Este projeto está licenciado para fins educacionais e profissionais. Fique à vontade para explorar, contribuir e personalizar.
+
+## 🤝 Contribuições
+
+Pull requests são bem-vindos. Para grandes mudanças, por favor, abra uma issue para discutir o que você gostaria de alterar.
+
+## 📢 Contato
+
+Frontend desenvolvido por [Rafael N. Siqueira](https://github.com/rnsiqueira).
